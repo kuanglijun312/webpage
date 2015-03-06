@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+		
+	<title>联想企业级产品助力天津市人口综合信息项目</title>
+	<script>var zmdoc = zmdoc||{};</script>
+	<!--[if IE]>
+							<![endif]-->
+
+		
+	<script type="text/javascript" src="http://html.zmaitech.com/document/common/z.js"></script>		<script type="text/javascript"> </script>
+	<style type="text/css">@charset "utf-8";body,html,nav,ol,th,embed,abbr,li,input,gloabl,h2,input,td,h1,blockquote,xml,div,dl,dt,dd,ul,h3,h4,h5,h6,pre,form,fieldset,p{margin:0;padding:0;}img,fieldset, body,html{border:none;}address,caption,cite,code,dfn,em,strong,th,abbr,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;line-height:1;font-family: "microsoft yahei","SimSun",Arial,"adelle-1","adelle-2","kulturista-web-1","kulturista-web-2","Nixie One","StMarieThin",Georgia,serif;}q:before,q:after{content:'';}table {border-collapse:collapse;border-spacing:0;}html {font:12px/150% "SimSun","Helvetica Neue",Helvetica,Arial,sans-serif; color:#333;background-color: #FFF;}h1{font-size:100%;}h2, .h2 {font-size:16px;}h3, .h3 {font-size:14px;}h4, .h4 {font-size:12px;}h5, .h5 {font-size:11px;}strong {font-weight:bold;}.clearfix{clear:both; zoom:1; } .clearfix:after {content:"."; clear:both; display:block; height:0; font:0/0 arial; visibility:hidden;}.u,a.u {text-decoration:underline;}.nu, a.nu {text-decoration:none;}html,body {color: #666;font-family: "microsoft yahei","SimSun",Arial,"adelle-1","adelle-2","kulturista-web-1","kulturista-web-2","Nixie One","StMarieThin",Georgia,serif;}h2,h3 {font-weight: normal;color: #333;}a {text-decoration: none;color: inherit;}#wrapper {width: 1000px;margin: 0 auto;padding-bottom:50px;}.header img {display: block;}.button {color: #fff;background: #df270e;padding: 5px 20px;border-right: 10px solid #aa1e0b;font-size: 14px;}.button:hover {background: #aa1e0b;}.detail {padding: 0 120px 40px;}.detail h2 {font-size: 18px;line-height: 1.4;color: #c00;margin: 40px 0 30px;}.detail h3 {margin: 25px 0 15px;}.detail p {margin: 15px 0;font-size: 13px;line-height: 22px;}.detail ul li {list-style: disc outside;font-size: 13px;line-height: 22px;margin: 10px 0 10px 15px;}.detail ol{list-style: outside decimal;margin-left: 20px;}.detail ol li{font-size: 13px;line-height: 22px;margin: 10px 0;}.detail .red {color: #c00;}.detail .simg {margin-left: -15px;}</style>	
+	<style>.w-example1_header {}.w-example1_detail {padding: 0 100px 40px 100px;}</style>
+</head>
+<body class="zm ">
+	<div id="wrapper" class="clearfix">
+<!-- WIDGET-example1_header-BOF -->
+<div class="w-example1_header header">
+<img src="assets/example1_01.jpg" width="1003" height="260" />
+<img src="assets/example1_02.jpg" width="1003" height="397" />
+</div>
+<!-- WIDGET-example1_header-EOF -->
+<!-- WIDGET-example1_detail-BOF -->
+<div class="w-example1_detail detail">
+	<h2>方案设计</h2>
+	<p>为了解决生产系统与查询系统之间性能相互影响，在设计架构的初始便是以数据为中心，使得生产与查询自建信息系统。生产系统承载数据录入业务，保证数据采集录入过程中稳定性；应用系统解决不同业务单元的查询应用，保证数据查询的准确性。而两套系统中数据的同步则是依靠基于Oracle Golden Gate软件来实现，通过数据库容灾软件，使得生产数据能够实时同步到查询系统中，以保证查询/采集系统数据的一致性，但相互业务互不影响。系统拓扑图如下：</p>
+	<img src="assets/example1_03.jpg" width="810" height="588" />
+	<p>业务服务器及数据库服务器在物理上将会设计成为两部分，前端是用来做采集点的数据录入，分布在全市的500个终端用户通过部署在信息中心的防火墙及流量控制器接入千兆核心交换机，其间需要通过入侵检测服务器、认证网管、用户认证等安全措施确保连接的合法性，并通过负载均衡系统分布到前端数量众多的应用服务器中。后端是四台高配的企业级服务器,通过Oracle数据库集群对外提供数据录入功能，同时设置了光纤线路的路径冗余，从而保证数据的高可用性。在公安网系统中有一台数据库备份服务器，通过Golden Gate软件功能实现与生产数据之间的备份。</p>
+	<p>另一方面将新建查询系统，在架构设计上使应用系统与采集系统分开。前端是业务服务器，用于负载前端如计生，社保，市政等不同业务种类的查询，同时后端放置四台企业级服务器，通过Oracle数据库集群对外提供数据查询功能，同时设置了光纤线路的路径冗余，从而保证数据的高可用性。</p>
+	<p>生产存储与应用存储之间数据的同步则是此次方案的亮点。通过具有容灾功能的Oracle Golden Gate软件，可以将在生产存储的数据实时同步至查询存储中，满足前端业务对数据的查询功能。构建此套系统，不仅可以将生产数据与应用数据分开，提高生产系统的性能，还能够保证数据采集的连贯性。</p>
+	<h2>产品配置</h2>
+<img class="simg" src="assets/example1_04.jpg" width="850" height="554" />
+	<h2>客户收益</h2>
+	<p>方案实施后，成功的为公安客户提供了内网的生产数据与外网查询数据对系统性能瓶颈影响的解决方案。该方案既能够保证公安内部人口信息的录入业务，同时也能够满足人口信息系统的对外查询业务。此方案也解决了也克服了公安网络和外网数据安全问题，保证了数据安全同步又实现人口信息系统对外和对内业务相对独立。本次整体方案的基础设备与实施均由联想提供，减少了客户实施售后阶段的沟通成本。</p>
+</div>
+<!-- WIDGET-example1_detail-EOF -->
+</div>
+<div style="visibility:hidden;">
+<script language="JavaScript" type="text/javascript" src="assets/lenovo_detection.js"></script>
+</div></body>
+</html>
